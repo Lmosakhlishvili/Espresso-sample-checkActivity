@@ -33,7 +33,7 @@ class ExampleInstrumentedTest {
         isTextOnScreen("SecondaryActivity")
         isTextOnScreen("Back")
         Assert.assertEquals("SecondaryActivity", secondPageText.getText(5))
-        Assert.assertEquals("Back", secondPageBackBtn.getText(6))
+        Assert.assertEquals("Back", secondPageBackBtn.getText(5))
     }
 
     companion object{
