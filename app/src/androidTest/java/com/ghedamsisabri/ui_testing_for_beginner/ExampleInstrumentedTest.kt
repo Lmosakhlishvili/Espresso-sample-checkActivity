@@ -27,14 +27,19 @@ class ExampleInstrumentedTest {
     @Test
     fun checkSecondPage() {
         NextBtn.tap()
-        secondPageActivity.isViewDisplayed()
+        secondPageText.isViewDisplayed()
+        secondPageBackBtn.isViewDisplayed()
 
         isTextOnScreen("SecondaryActivity")
-        Assert.assertEquals("SecondaryActivity", secondPageActivity.getText(5))
+        isTextOnScreen("Back")
+        Assert.assertEquals("SecondaryActivity", secondPageText.getText(5))
+        Assert.assertEquals("Back", secondPageBackBtn.getText(5))
     }
 
     companion object{
         val NextBtn: Matcher<View> by lazy { withId(R.id.button_next_activity) }
-        val secondPageActivity: Matcher<View> by lazy { withId(R.id.activity_secondary_title) }
+        val secondPageText: Matcher<View> by lazy { withId(R.id.activity_secondary_title) }
+        val secondPageBackBtn: Matcher<View> by lazy { withId(R.id.button_back) }
+
     }
 }
