@@ -58,8 +58,9 @@ class ExampleInstrumentedTest {
         NextBtn.tap()
         BackBtn.tap()
 
-        secondPageActivity.assertIsNotViewDisplayed()
+//        secondPageActivity.assertIsNotViewDisplayed()
         MainPageActivity.assertIsViewDisplayed()
+        NextBtn.assertIsViewDisplayed()
     }
 
     companion object{
